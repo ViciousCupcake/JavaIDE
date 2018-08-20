@@ -1,0 +1,791 @@
+de:
+  activerecord:
+    attributes:
+      code_harbor_link:
+        oauth2token: OAuth2 Token
+      consumer:
+        name: Name
+        oauth_key: OAuth Key
+        oauth_secret: OAuth Secret
+      error:
+        message: Nachricht
+      execution_environment:
+        docker_image: Docker-Image
+        exposed_ports: Zugängliche Ports
+        file_type: Standard-Dateityp
+        file_type_id: Standard-Dateityp
+        help: Hilfetext
+        memory_limit: Speicher-Limit (in MB)
+        network_enabled: Netzwerkzugriff
+        name: Name
+        permitted_execution_time: Erlaubte Ausführungszeit (in Sekunden)
+        pool_size: Docker-Container-Pool-Größe
+        run_command: Ausführungsbefehl
+        test_command: Testbefehl
+        testing_framework: Testing-Framework
+        user: Autor
+      exercise:
+        description: Beschreibung
+        embedding_parameters: Parameter für LTI-Einbettung
+        tags: Tags
+        execution_environment: Ausführungsumgebung
+        execution_environment_id: Ausführungsumgebung
+        files: Dateien
+        hide_file_tree: Dateibaum verstecken
+        instructions: Anweisungen
+        maximum_score: Erreichbare Punktzahl
+        public: Öffentlich
+        selection: Ausgewählt
+        title: Titel
+        user: Autor
+        allow_auto_completion: "Autovervollständigung aktivieren"
+        allow_file_creation: "Dateierstellung erlauben"
+        difficulty: Schwierigkeitsgrad
+        token: "Aufgaben-Token"
+      proxy_exercise:
+        title: Title
+        files_count: Anzahl der Aufgaben
+      external_user:
+        consumer: Konsument
+        email: E-Mail
+        name: Name
+      file:
+        content: Inhalt
+        feedback_message: Feedback-Nachricht
+        file_type: Dateityp
+        file_type_id: Dateityp
+        hidden: Versteckt
+        name: Name
+        path: Pfad
+        read_only: Schreibgeschützt
+        role: Rolle
+        weight: Punktzahl
+        file_template_id: "Dateivorlage"
+      file_type:
+        binary: Binär
+        editor_mode: Editor-Modus
+        executable: Ausführbar
+        file_extension: Dateiendung
+        indent_size: Einrückung
+        name: Name
+        renderable: Anzeigbar
+        user: Autor
+      hint:
+        locale: Sprache
+        message: Nachricht
+        name: Name
+        regular_expression: Regulärer Ausdruck
+      intervention:
+        name: Name
+      internal_user:
+        activated: Aktiviert
+        consumer: Konsument
+        consumer_id: Konsument
+        email: E-Mail
+        name: Name
+        password: Passwort
+        password_confirmation: Passwort-Bestätigung
+        role: Rolle
+      request_for_comments:
+        comments: Kommentare
+        exercise: Aufgabe
+        execution_environment: Sprache
+        username: Benutzername
+        requested_at: Angefragezeitpunkt
+        question: "Frage"
+        close: "Fenster schließen"
+        last_update: "Letzte Aktivität"
+      submission:
+        cause: Anlass
+        code: Code
+        exercise: Aufgabe
+        files: Dateien
+        score: Punktzahl
+        user: Autor
+      tag:
+        name: Name
+        usage: Verwendet
+        difficulty: Anteil an der Aufgabe
+      file_template:
+        name: "Name"
+        file_type: "Dateityp"
+        content: "Code"
+      error_template:
+        name: Name
+        signature: Regulärer Ausdruck
+        description: Beschreibung
+        hint: Hinweis
+      error_template_attribute:
+        important: "Wichtig"
+        key: "Name"
+        description: "Beschreibung"
+        regex: "Regulärer Ausdruck"
+      exercise_collections:
+        id: "ID"
+        name: "Name"
+        user: "Verantwortlicher"
+        use_anomaly_detection: "Abweichungen in der Arbeitszeit erkennen"
+        updated_at: "Letzte Änderung"
+        exercises: "Aufgaben"
+      user_exercise_feedback:
+        user: "Autor"
+        exercise: "Aufgabe"
+        feedback_text: "Feedback Text"
+      exercise_collection_item:
+        exercise: "Aufgabe"
+    models:
+      code_harbor_link:
+        one: CodeHarbor-Link
+        other: CodeHarbor-Links
+      consumer:
+        one: Konsument
+        other: Konsumenten
+      error:
+        one: Fehler
+        other: Fehler
+      error_template:
+        one: Fehlertemplate
+        other: Fehlertemplates
+      error_template_attribute:
+        one: Fehlertemplatettribut
+        other: Fehlertemplatettribute
+      execution_environment:
+        one: Ausführungsumgebung
+        other: Ausführungsumgebungen
+      exercise:
+        one: Aufgabe
+        other: Aufgaben
+      exercise_collection:
+        one: Aufgabesammlung
+        other: Aufgabensammlungen
+      proxy_exercise:
+        one: Proxy Aufgabe
+        other: Proxy Aufgaben
+      external_user:
+        one: Externer Nutzer
+        other: Externe Nutzer
+      file:
+        one: Datei
+        other: Dateien
+      file_template:
+        one: Dateivorlage
+        other: Dateivorlagen
+      file_type:
+        one: Dateityp
+        other: Dateitypen
+      hint:
+        one: Tipp
+        other: Tipps
+      internal_user:
+        one: Interner Nutzer
+        other: Interne Nutzer
+      request_for_comment:
+        one: Kommentaranfrage
+        other: Kommentaranfragen
+      submission:
+        one: Abgabe
+        other: Abgaben
+      tag:
+        one: Tag
+        other: Tags
+      user_exercise_feedback:
+        one: Feedback
+        other: Feedback
+      comment:
+        one: Kommentar
+        other: Kommentare
+    errors:
+      messages:
+        together: 'muss zusammen mit %{attribute} definiert werden'
+      models:
+        exercise:
+          at_most_one_main_file: dürfen höchstens eine Hauptdatei enthalten
+  admin:
+    dashboard:
+      show:
+        current: Aktuelle Verfügbarkeit
+        history: Verfügbarkeitsverlauf
+        inactive: Der Container-Pool ist nicht aktiv.
+        quantity: Verfügbare Container
+  application:
+    not_authorized: Sie Sind nicht berechtigt, diese Aktion auszuführen.
+    welcome:
+      text_signed_in_as_external_user: 'Bitte rufen Sie %{application_name} von einer E-Learning-Plattform auf.'
+      text_signed_in_as_internal_user: 'Schön, Sie zu sehen, %{user_name}!'
+      text_signed_out: 'Wenn Sie ein Lernender sind, rufen Sie %{application_name} bitte von einer E-Learning-Plattform auf. Wenn Sie ein Lehrer sind, <a href="%{sign_in_path}">melden Sie sich bitte an</a>.'
+      title: 'Willkommen bei %{application_name}'
+  breadcrumbs:
+    application:
+      welcome: Startseite
+    dashboard:
+      show: Dashboard
+    sessions:
+      destroy_through_lti: Code-Abgabe
+    statistics:
+      show: "Statistiken"
+      graphs: "Visualisierungen"
+      user_activity_history: Nutzeraktivitätshistorie
+      rfc_activity_history: Kommentaranfragenhistorie
+  consumers:
+    show:
+      link: Konsument
+  errors:
+    connection_refused: Verbindung abgelehnt
+    index:
+      count: Anzahl
+  execution_environments:
+    form:
+      hints:
+        command: <em>filename</em> wird automatisch durch den richtigen Dateinamen ersetzt.
+        docker_image: 'Wählen Sie ein Docker-Image aus der Liste oder fügen Sie ein neues hinzu, welches über <a href="https://hub.docker.com/" target="_blank">DockerHub</a> verfügbar ist.'
+        exposed_ports: Während der Ausführung sind diese Ports für den Nutzer zugänglich.
+    index:
+      shell: Shell
+    shell:
+      command: Befehl
+      headline: Shell
+    statistics:
+      exercise: Übung
+      users: Anzahl (externer) Nutzer
+      score: Durchschnittliche Punktzahl
+      stddev_score: stdabw (Punktzahl)
+      stddev_worktime: stdabw (Arbeitszeit)
+      maximum_score: Maximale Punktzahl
+      percentage_correct: Prozent Korrekt
+      runs: Durchschnittliche Anzahl von Versuchen
+      worktime: Durchschnittliche Arbeitszeit
+  exercises:
+    editor:
+      collapse_action_sidebar: Aktions-Leiste Einklappen
+      collapse_output_sidebar: Ausgabe-Leiste Einklappen
+      confirm_start_over: Wollen Sie wirklich von vorne anfangen?
+      confirm_submit: Wollen Sie Ihren Code wirklich zur Bewertung abgeben?
+      create_file: Neue Datei
+      depleted: Alle Ausführungsausgebungen sind momentan in Benutzung. Probiere es später nochmal.
+      destroy_file: Datei löschen
+      download: Herunterladen
+      dummy: Keine Aktion
+      expand_action_sidebar: Aktions-Leiste Ausklappen
+      expand_output_sidebar: Ausgabe-Leiste Ausklappen
+      input: Ihre Eingabe
+      lastsaved: 'Zuletzt gespeichert: '
+      network: 'Während Ihr Code läuft, ist Port %{port} unter folgender Adresse erreichbar: <a href="%{address}" target="_blank">%{address}</a>.'
+      render: Anzeigen
+      run: Ausführen
+      run_failure: Ihr Code konnte nicht auf der Plattform ausgeführt werden.
+      run_success: Ihr Code wurde auf der Plattform ausgeführt.
+      requestComments: Kommentare erbitten
+      requestCommentsTooltip: Falls Sie Hilfe mit Ihrem Code benötigen, können Sie hier Kommentare erbitten
+      save: Speichern
+      score: Bewerten
+      send: Senden
+      start_over: Von vorne anfangen
+      stop: Stoppen
+      submit: Code zur Bewertung abgeben
+      test: Testen
+      timeout: 'Ausführung gestoppt. Ihr Code hat die erlaubte Ausführungszeit von %{permitted_execution_time} Sekunden überschritten.'
+      exercise_deadline_passed: 'Das Ergebnis kann nicht übertragen werden.'
+      tooltips:
+        save: Ihr Code wird automatisch gespeichert, wann immer Sie eine Datei herunterladen, ausführen oder testen. Explizites Speichern ist also selten notwendig.
+        exercise_deadline_passed: 'Entweder ist die Abgabefrist bereits abgelaufen oder Sie haben die Aufgabe nicht direkt über die E-Learning Plattform gestartet. (Möglicherweise haben Sie den Zurück Button Ihres Browsers benutzt nachdem Sie Ihre Aufgabe abgegeben haben?)'
+      request_for_comments_sent: "Kommentaranfrage gesendet."
+    editor_file_tree:
+      file_root: Dateien
+    file_form:
+      hints:
+        feedback_message: Diese Nachricht wird als Tipp zu fehlschlagenden Tests angezeigt.
+        path: 'Pfad der Datei im Projektverzeichnis. Kann auch leer gelassen werden.'
+    form:
+      add_file: Datei hinzufügen
+      tags: "Tags"
+      click_to_collapse: "Zum Aus-/Einklappen hier klicken..."
+    implement:
+      alert:
+        text: 'Ihr Browser unterstützt nicht alle Funktionalitäten, die %{application_name} benötigt. Bitte nutzen Sie einen modernen Browser, um %{application_name} zu besuchen.'
+        title: Ihr Browser wird nicht unterstützt!
+      default_feedback: Sehr gut. Alle Tests waren erfolgreich.
+      error_messages: Fehlermeldungen
+      feedback: Feedback
+      file: 'Test-Datei <span class="number">%{number}</span> (<span class="filename">%{filename}</span>)'
+      hint: Tipp
+      no_files: Die Aufgabe umfasst noch keine sichtbaren Dateien.
+      no_output: Die letzte Code-Ausführung hat keine Ausgabe erzeugt.
+      no_output_yet: Bisher existiert noch keine Ausgabe.
+      output: Programm-Ausgabe
+      passed_tests: Erfolgreiche Tests
+      progress: Fortschritt
+      results: Ergebnisse
+      start: Mit dem Programmieren beginnen
+      test_count: '<span class="number">%{count}</span> Test-Dateien wurden ausgeführt.'
+      workspace: Arbeitsbereich
+      comment:
+        a_comment: Kommentar
+        line: Zeile
+        dialogtitle: Kommentar hinzufügen
+        others: Andere Kommentare auf dieser Zeile
+        addCommentExercise: Aufgabe kommentieren
+        addyours: Fügen Sie Ihren Kommentar hinzu
+        addComment: Hier haben Sie die Möglichkeit Ihr Feedback zu dieser Aufgabe zu geben. Dies bezieht sich ausdrücklich NICHT auf die hier sichtbare Lösung des Teilnehmers, sondern nur auf die Aufgabe. Fanden Sie die Aufgabe zu leicht oder schwer? War die Beschreibung der Aufgabe verständlich und vollständig?
+        addCommentButton: Kommentar abschicken
+        removeAllOnLine: Meine Kommentare auf dieser Zeile löschen
+        listing: Die neuesten Kommentaranfragen
+        request: "Kommentaranfrage stellen"
+        question: "Bitte beschreiben Sie kurz ihre Probleme oder nennen Sie den Programmteil, zu dem Sie Feedback wünschen."
+      rfc_intervention:
+        text: "Es scheint so als würden Sie Probleme mit der Aufgabe haben. Wenn Sie möchten, können wir Ihnen helfen!"
+      break_intervention:
+        title: "Pause"
+        text: "Uns ist aufgefallen, dass du schon lange an dieser Aufgabe arbeitest. Möchtest du vielleicht später weiter machen um erstmal auf neue Gedanken zu kommen?"
+      error_hints:
+        heading: "Hinweise"
+    index:
+      clone: Duplizieren
+      implement: Implementieren
+      test_files: Test-Dateien
+      feedback: Feedback
+    statistics:
+      average_score: Durchschnittliche Punktzahl
+      final_submissions: Finale Abgaben
+      intermediate_submissions: Intermediäre Abgaben
+      participants: Bearbeitende Nutzer
+      users: '%{count} verschiedene Nutzer'
+      user: Nutzer
+      score: Punktzahl
+      runs: Versuche
+      worktime: Arbeitszeit
+      average_worktime: Durchschnittliche Arbeitszeit
+      internal_users: Interne Nutzer
+      external_users: Externe Nutzer
+      finishing_rate: Abschlussrate
+    submit:
+      failure: Beim Übermitteln Ihrer Punktzahl ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.
+      full_score_redirect_to_rfc: Herzlichen Glückwunsch! Sie haben die maximale Punktzahl für diese Aufgabe an den Kurs übertragen. Ein anderer Teilnehmer hat eine Frage zu der von Ihnen gelösten Aufgabe. Er würde sich sicherlich sehr über ihre Hilfe und Kommentare freuen.
+      full_score_redirect_to_own_rfc: Herzlichen Glückwunsch! Sie haben die maximale Punktzahl für diese Aufgabe an den Kurs übertragen. Ihre Frage ist damit wahrscheinlich gelöst? Falls ja, fügen Sie doch den entscheidenden Kniff als Antwort hinzu und markieren die Frage als gelöst, bevor sie das Fenster schließen.
+    external_users:
+      statistics:
+        no_data_available: Keine Daten verfügbar.
+        time: Zeit
+        cause: Grund
+        score: Punktzahl
+        tests: Unit Tests
+        time_difference: 'Arbeitszeit bis hier*'
+        addendum: '* Differenzen von mehr als 10 Minuten werden ignoriert.'
+  proxy_exercises:
+      index:
+        clone: Duplizieren
+  external_users:
+    statistics:
+      title: Statistiken für Externe Benutzer
+      exercise: Übung
+      score: Bewertung
+      runs: Abgaben
+      worktime: Arbeitszeit
+    show:
+      loading_tag_statistics: "Lade Lernbereichstatistiken"
+      tag_statistics: "Lernbereichstatistiken"
+      empty_tag_statistics: "Keine Statistiken verfügbar"
+      exercise_statistics: "Aufgabenstatistiken"
+  files:
+    roles:
+      main_file: Hauptdatei
+      reference_implementation: Referenzimplementierung
+      regular_file: Normale Datei
+      teacher_defined_test: Test als Bewertungsgrundlage
+      user_defined_file: Benutzerdefinierte Datei
+      user_defined_test: Benutzerdefinierter Test
+    error:
+      filename: "Die Datei konnte nicht gespeichert werden, da eine Datei mit dem Namen '%{name}' bereits existiert."
+  hints:
+    form:
+      hints:
+        message: Diese Nachricht wird als Erklärung des aufgetretenen Fehlers angezeigt. Platzhalter werden automatisch durch Funde des regulären Ausdrucks ersetzt.
+        regular_expression: Dieser reguläre Ausdruck wird auf die Fehlermeldung angewendet, um relevante Bezeicher zu extrahieren.
+  internal_users:
+    activate:
+      headline: Registrierung abschließen
+      submit: Passwort speichern
+      success: Sie haben Ihre Registrierung erfolgreich abgeschlossen.
+    forgot_password:
+      headline: Passwort zurücksetzen
+      submit: Anweisungen zum Zurücksetzen senden
+      success: Anweisungen zum Zurücksetzen Ihres Passworts wurden an Ihre E-Mail-Adresse gesendet.
+    reset_password:
+      headline: Passwort zurücksetzen
+      submit: Passwort speichern
+      success: Sie haben Ihr Passwort erfolgreich geändert.
+    show:
+      link: Profil
+  search:
+    search_in_forum: "Probleme? Suche hier im Forum"
+  locales:
+    de: Deutsch
+    en: Englisch
+  mailers:
+    user_mailer:
+      activation_needed:
+        body: 'Bitte besuchen Sie %{link} und wählen Sie ein Passwort, um Ihre Registrierung abzuschließen.'
+        subject: Bitte schließen Sie Ihre Registrierung ab.
+      got_new_comment:
+        body: |
+          English version below <br>
+          _________________________<br>
+          <br>
+          Hallo %{receiver_displayname}, <br>
+          <br>
+          es gibt einen neuen Kommentar von %{commenting_user_displayname} zu Ihrer Kommentaranfrage auf CodeOcean. <br>
+          <br>
+          %{commenting_user_displayname} schreibt: %{comment_text}<br>
+          <br>
+          Sie finden ihre Kommentaranfrage hier: %{link_to_comment} <br>
+          <br>
+          Falls Sie beim Klick auf diesen Link eine Fehlermeldung erhalten, dass Sie nicht berechtigt wären diese Aktion auszuführen, öffnen Sie bitte eine beliebige Programmieraufgabe aus einem Kurs heraus und klicken den Link danach noch einmal.<br>
+          <br>
+          Eine Übersicht Ihrer Kommentaranfragen gibt es hier: %{link_my_comments} <br>
+          Alle Kommentaranfragen aller Benutzer finden Sie hier: %{link_all_comments} <br>
+          <br>
+          Diese Mail wurde automatisch von CodeOcean verschickt.<br>
+          <br>
+          _________________________<br>
+          <br>
+          Dear %{receiver_displayname}, <br>
+          <br>
+          you received a new comment from %{commenting_user_displayname} to your request for comments on CodeOcean. <br>
+          <br>
+          %{commenting_user_displayname} wrote: %{comment_text} <br>
+          <br>
+          You can find your request for comments here: %{link_to_comment} <br>
+          <br>
+          If you receive an error that you are not authorized to perform this action when clicking the link, please log-in through any course exercise beforehand and click the link again. <br>
+          <br>
+          An overview of all your comments can be accessed here: %{link_my_comments} <br>
+          All comments of all participants are available here: %{link_all_comments} <br>
+          <br>
+          This mail was automatically sent by CodeOcean. <br>
+        subject: Sie haben einen neuen Kommentar von %{commenting_user_displayname} auf CodeOcean erhalten.
+      reset_password:
+        body: 'Bitte besuchen Sie %{link}, sofern Sie Ihr Passwort zurücksetzen wollen.'
+        subject: Anweisungen zum Zurücksetzen Ihres Passworts
+      send_thank_you_note:
+        body: |
+          English version below <br>
+          _________________________<br>
+          <br>
+          Hallo %{receiver_displayname}, <br>
+          <br>
+          %{author} hat Ihnen für Ihren Kommentar auf CodeOcean gedankt. <br>
+          <br>
+          %{author} schreibt: %{thank_you_note}<br>
+          <br>
+          Sie finden die Kommentaranfrage hier: %{link_to_comment} <br>
+          <br>
+          Falls Sie beim Klick auf diesen Link eine Fehlermeldung erhalten, dass Sie nicht berechtigt wären diese Aktion auszuführen, öffnen Sie bitte eine beliebige Programmieraufgabe aus einem Kurs heraus und klicken den Link danach noch einmal.<br>
+          <br>
+          Danke, dass Sie anderen Nutzern von CodeOcean helfen!
+          <br>
+          Diese Mail wurde automatisch von CodeOcean verschickt.<br>
+          <br>
+          _________________________<br>
+          <br>
+          Dear %{receiver_displayname}, <br>
+          <br>
+          %{author} thanks you for your comment. <br>
+          <br>
+          %{author} wrote: %{thank_you_note} <br>
+          <br>
+          You can find the request for comments here: %{link_to_comment} <br>
+          <br>
+          If you receive an error that you are not authorized to perform this action when clicking the link, please log-in through any course exercise beforehand and click the link again. <br>
+          <br>
+          Thank you for helping other users on CodeOcean!
+          <br>
+          This mail was automatically sent by CodeOcean. <br>
+        subject: "%{author} sagt Danke!"
+      got_new_comment_for_subscription:
+        body: |
+          English version below <br>
+          _________________________<br>
+          <br>
+          Hallo %{receiver_displayname}, <br>
+          <br>
+          es gibt einen neuen Kommentar von %{author_displayname} zu einer Kommentaranfrage auf CodeOcean, die Sie abonniert haben. <br>
+          <br>
+          %{author_displayname} schreibt: %{comment_text}<br>
+          <br>
+          Sie finden die Kommentaranfrage hier: %{link_to_comment} <br>
+          <br>
+          Falls Sie beim Klick auf diesen Link eine Fehlermeldung erhalten, dass Sie nicht berechtigt wären diese Aktion auszuführen, öffnen Sie bitte eine beliebige Programmieraufgabe aus einem Kurs heraus und klicken den Link danach noch einmal.<br>
+          <br>
+          Wenn Sie keine weiteren Benachrichtigungen zu dieser Anfrage erhalten möchten, klicken Sie bitte hier: %{unsubscribe_link}
+          <br>
+          Diese Mail wurde automatisch von CodeOcean verschickt.<br>
+          <br>
+          _________________________<br>
+          <br>
+          Dear %{receiver_displayname}, <br>
+          <br>
+          you received a new comment from %{author_displayname} to a request for comments on CodeOcean that you have subscribed to. <br>
+          <br>
+          %{author_displayname} wrote: %{comment_text} <br>
+          <br>
+          You can find the request for comments here: %{link_to_comment} <br>
+          <br>
+          If you receive an error that you are not authorized to perform this action when clicking the link, please log-in through any course exercise beforehand and click the link again. <br>
+          <br>
+          If you don't want to be notified about further comments, please click here: %{unsubscribe_link}
+          <br>
+          This mail was automatically sent by CodeOcean. <br>
+        subject: "%{author_displayname} hat einen neuen Kommentar in einer Diskussion veröffentlicht, die Sie abonniert haben."
+      exercise_anomaly_detected:
+        subject: "Unregelmäßigkeiten in Aufgaben Ihrer Aufgabensammlung"
+        body1: |
+          English version below <br>
+          _________________________<br>
+          <br>
+          Hallo %{receiver_displayname}, <br>
+          <br>
+          eine oder mehrere Aufgaben Ihrer Aufgabensammlung "%{collection_name}" zeigen Unregelmäßigkeiten in der Bearbeitungszeit. Möglicherweise sind sie zu schwer oder zu leicht.
+          <br>
+          Die Aufgaben sind:
+          <br>
+        body2: |
+          <br>
+          Falls Sie beim Klick auf einen Link eine Fehlermeldung erhalten, dass Sie nicht berechtigt wären diese Aktion auszuführen, öffnen Sie bitte eine beliebige Programmieraufgabe aus einem Kurs heraus und klicken den Link danach noch einmal.<br>
+          <br>
+          Diese Mail wurde automatisch von CodeOcean verschickt.<br>
+          <br>
+          _________________________<br>
+          <br>
+          Dear %{receiver_displayname}, <br>
+          <br>
+          at least one exercise in your exercise collection "%{collection_name}" has a much longer or much shorter average working time than the average. Perhaps they are too difficult or too easy.
+          <br>
+          The exercises are:
+          <br>
+        body3: |
+          <br>
+          If you receive an error that you are not authorized to perform this action when clicking a link, please log-in through any course exercise beforehand and click the link again. <br>
+          <br>
+          This mail was automatically sent by CodeOcean. <br>
+      exercise_anomaly_needs_feedback:
+        body: |
+          English version below <br>
+          _________________________<br>
+          <br>
+          Hallo %{receiver_displayname}, <br>
+          <br>
+          um die Aufgaben auf CodeOcean weiter zu verbessern, benötigen wir Ihre Mithilfe. Bitte nehmen Sie sich ein paar Minuten Zeit um ein kurzes Feedback zu folgender Aufgabe zu geben:
+          <br>
+          %{exercise} - %{link}
+          <br>
+          Falls Sie beim Klick auf diesen Link eine Fehlermeldung erhalten, dass Sie nicht berechtigt wären diese Aktion auszuführen, öffnen Sie bitte eine beliebige Programmieraufgabe aus einem Kurs heraus und klicken den Link danach noch einmal.<br>
+          <br>
+          Diese Mail wurde automatisch von CodeOcean verschickt.<br>
+          <br>
+          _________________________<br>
+          <br>
+          Dear %{receiver_displayname}, <br>
+          <br>
+          we need your help to improve the quality of the exercises on CodeOcean. Please take a few minutes to give us feedback for the following exercise:
+          <br>
+          %{exercise} - %{link}
+          <br>
+          If you receive an error that you are not authorized to perform this action when clicking the link, please log-in through any course exercise beforehand and click the link again. <br>
+          <br>
+          This mail was automatically sent by CodeOcean. <br>
+        subject: "Eine Aufgabe auf CodeOcean benötigt Ihr Feedback"
+  request_for_comments:
+    click_here: Zum Kommentieren auf die Seitenleiste klicken!
+    comments: Kommentare
+    howto: |
+      Um Kommentare zu einer Programmzeile hinzuzufügen, kann einfach auf die jeweilige Zeilennummer auf der linken Seite geklickt werden. <br>
+      Es öffnet sich ein Textfeld, in dem der Kommentar eingetragen werden kann. <br>
+      Mit "Kommentar abschicken" wird der Kommentar dann gesichert und taucht als Sprechblase neben der Zeile auf.
+    howto_title: 'Anleitung'
+    index:
+      get_my_comment_requests: Meine Kommentaranfragen
+      all: "Alle Kommentaranfragen"
+      get_rfcs_with_my_comments: Kommentaranfragen die ich kommentiert habe
+      get_my_rfc_activity: "Meine Kommentaraktivität"
+    no_question: "Der Autor hat keine Frage zu dieser Anfrage gestellt."
+    mark_as_solved: "Diese Frage als beantwortet markieren"
+    show_all: "Alle Anfragen anzeigen"
+    show_solved: "Nur gelöste Anfragen anzeigen"
+    show_unsolved: "Nur ungelöste Anfragen anzeigen"
+    solved: "Diese Frage wurde erfolgreich beantwortet"
+    comment_exercise: "Ich möchte die Aufgabenstellung kommentieren"
+    write_a_thank_you_node: "Wenn Sie möchten, können Sie sich bei allen Mitstudenten, die Ihnen bei der Beantwortung Ihrer Frage geholfen haben, bedanken:"
+    send_thank_you_note: "Senden"
+    cancel_thank_you_note: "Nichts senden"
+    comment_edited: "bearbeitet"
+    modal_title: "Einen Kommentar in Zeile ${line} hinzufügen"
+    click_for_more_comments: "Klicken um ${numComments} weitere Kommentare zu sehen..."
+    subscribe_to_author: "Bei neuen Kommentaren des Autors per E-Mail benachrichtigt werden"
+    no_output: "Keine Ausgabe."
+    runtime_output: "Programmausgabe"
+    test_results: "Testergebnisse"
+  sessions:
+    create:
+      failure: Fehlerhafte E-Mail oder Passwort.
+      success: Sie haben sich erfolgreich angemeldet.
+    create_through_lti:
+      session_with_outcome: 'Bitte beachten Sie, dass zur Gutschrift der Punkte Ihr Code nach der Bearbeitung durch Klicken auf den Button "Code zur Bewertung abgeben" eingetragen werden muss.'
+      session_without_outcome: 'Dies ist eine Übungs-Session. Ihre Bewertung wird nicht an %{consumer} übermittelt.'
+    destroy:
+      link: Abmelden
+      success: Sie haben sich erfolgreich abgemeldet.
+    destroy_through_lti:
+      average_score: Durchschnittliche Punktzahl
+      final_submissions: Abgaben anderer Nutzer
+      finished_with_consumer: 'Sie können dieses Fenster nun schließen oder <a href="%{url}">zu %{consumer} zurückkehren</a>.'
+      finished_without_consumer: Sie können dieses Fenster nun schließen.
+      headline: Gut gemacht!
+      score: Ihre Punktzahl
+      success_with_outcome: 'Ihr Code wurde erfolgreich bewertet. Ihre Bewertung wurde an %{consumer} übermittelt.'
+      success_without_outcome: Ihr Code wurde erfolgreich bewertet.
+      do_not_use_backbutton: 'Benutzen Sie nicht den "Zurück" Button des Browsers, um zu CodeOcean zurück zu kehren.'
+    new:
+      forgot_password: Passwort vergessen?
+      headline: Anmelden
+      link: Anmelden
+      remember_me: Angemeldet bleiben
+    oauth:
+      failure: Leider ist ein Fehler aufgetreten.
+      invalid_consumer: Ungültiger OAuth-Key.
+      invalid_exercise_token: Ungültiges Aufgaben-Token.
+      invalid_signature: Ungültige OAuth-Signatur.
+      missing_parameters: OAuth-Parameter fehlen.
+      used_nonce: Die Nonce wurde bereits verwendet.
+  shared:
+    actions: Aktionen
+    administration: Administration
+    already_signed_in: Sie sind bereits angemeldet.
+    apply_filters: Filter anwenden
+    back: Zurück
+    batch_update: Batch-Update
+    confirm_destroy: Sind Sie sicher?
+    create: '%{model} erstellen'
+    created_at: Erstellt
+    destroy: Löschen
+    edit: Bearbeiten
+    actions_button: 'Andere Aktionen'
+    errors_one: 'Beim Speichern ist ein Fehler aufgetreten'
+    errors_other: 'Beim Speichern sind %{count} Fehler aufgetreten'
+    help:
+      execution_environment_specific_help: 'Hilfe zu %{execution_environment}'
+      general_help: Allgemeine Hilfe
+      headline: Hilfe
+      link: Hilfe
+    index: Index
+    message_failure: Leider ist ein Fehler auf unserer Plattform aufgetreten. Bitte probieren Sie es später noch einmal.
+    new: Hinzufügen
+    new_model: '%{model} hinzufügen'
+    number: Nummer
+    object_cloned: '%{model} wurde erfolgreich dupliziert.'
+    object_created: '%{model} wurde erfolgreich erstellt.'
+    object_destroyed: '%{model} wurde erfolgreich gelöscht.'
+    object_updated: '%{model} wurde erfolgreich bearbeitet.'
+    out_of: '<span class="number">%{value}</span> von <span class="number">%{maximum_value}</span>'
+    reset_filters: Filter zurücksetzen
+    resources: Ressourcen
+    show: Anzeigen
+    statistics: Statistiken
+    tooltips:
+      shortcut: 'Tastaturkürzel: %{shortcut}'
+    update: '%{model} aktualisieren'
+    upload_file: Datei hochladen
+    time:
+      before: "%{time} zuvor"
+    hide: "Verstecken"
+  submissions:
+    causes:
+      autosave: Autosave
+      assess: Bewertung
+      download: Download
+      file: Benutzerdefinierte Datei
+      render: Anzeige
+      run: Ausführung
+      save: Speichern
+      submit: Abgabe
+      test: Test
+    create:
+      success: Ihr Code wurde gespeichert.
+    statistics:
+      history: Punkteverlauf
+      percentage: Prozentzahl
+      siblings: Dazugehörige Abgaben
+  users:
+    roles:
+      admin: Administrator
+      learner: Lernender
+      teacher: Lehrer
+  will_paginate:
+    next_label: 'Nächste Seite &#8594;'
+    page_gap: '&hellip;'
+    previous_label: '&#8592; Vorherige Seite'
+  file_template:
+    no_template_label: "Leere Datei"
+  user_exercise_feedback:
+    difficulty_easy: "Die Aufgabe war zu einfach"
+    difficulty_some_what_easy: "Die Aufgabe war etwas zu einfach"
+    difficulty_ok: "Die Aufgabe war gut zu lösen"
+    difficulty_some_what_difficult: "Die Aufgabe war etwas zu schwer"
+    difficult_too_difficult: "Die Aufgabe war zu schwer"
+    difficulty: "Schwierigkeit der Aufgabe:"
+    description: "Ihre Punkte wurden übertragen. Wir würden uns freuen, wenn Sie uns hier Feedback zur Aufgabe geben.<br> Wenn sie das nicht möchten, können Sie das Fenster auch einfach schließen.<br><br>Bitte beschreiben Sie, was Ihnen an der Aufgabe gefallen hat und was nicht. Gab es Schwierigkeiten bei der Aufgabe? War die Aufgabe zu leicht oder zu schwer?<br>Wir freuen uns über jedes Feedback."
+    estimated_time_less_5: "weniger als 5 Minuten"
+    estimated_time_5_to_10: "zwischen 5 und 10 Minuten"
+    estimated_time_10_to_20: "zwischen 10 und 20 Minuten"
+    estimated_time_20_to_30: "zwischen 20 und 30 Minuten"
+    estimated_time_more_30: "mehr als 30 Minuten"
+    working_time: "Geschätze Bearbeitungszeit für diese Aufgabe:"
+    no_feedback: "Es wurde noch kein Feedback zu dieser Aufgabe gegeben."
+  error_templates:
+    hints:
+      signature: "Ein regulärer Ausdruck in Ruby-Syntax und ohne führende und schließende \"/\""
+      hint_templates: 'Attributnamen in {{doppelten geschweiften Klammern}} werden zur Laufzeit durch die jeweiligen Attributwerte ersetzt. Beispiel: "Der Fehler ist in Zeile {{Line}}." --(StructuredError: {Line: 4})--> "Der Fehler ist in Zeile 4."'
+    attributes: "Attribute"
+    add_attribute: "Attribut hinzufügen"
+  comments:
+    deleted: "Gelöscht"
+    save_update: "Speichern"
+  subscriptions:
+    successfully_unsubscribed: "Ihr Abonnement für weitere Kommentare auf dieser Kommentaranfrage wurde erfolgreich beendet."
+    subscription_not_existent: "Das Abonnement, von dem Sie sich abmelden wollen, existiert nicht."
+  statistics:
+    sections:
+      users: "Benutzer"
+      exercises: "Aufgaben"
+      request_for_comments: "Kommentaranfragen"
+    entries:
+      exercises:
+        average_number_of_submissions: "Durchschnittliche Zahl von Abgaben"
+        submissions_per_minute: "Aktuelle Abgabenhäufigkeit (1h)"
+        submissions: "Abgaben"
+      request_for_comments:
+        percent_solved: "Beantwortete Anfragen"
+        percent_unsolved: "Unbeantwortete Anfragen"
+        percent_soft_solved: "Ungelöst mit voller Punktzahl"
+        with_comments: "Anfragen mit Kommentaren"
+      users:
+        currently_active: "Aktiv (5 Minuten)"
+        currently_active60: "Aktiv (60 Minuten)"
+        active: "Aktive Nutzer"
+    graphs:
+      user_activity: "Nutzeraktivität"
+      rfc_activity: "Kommentaranfragenaktivität"
+      history: "Historie"
+    activity_history:
+      from: "Von"
+      to: "Bis"
+      interval: "Intervall"
+      update: "Aktualisieren"
+  navigation:
+    sections:
+      errors: "Fehler"
+      files: "Dateien"
+      users: "Benutzer"
+      integrations: "Integrationen"
+  exercise_collections:
+    form:
+      add_exercises: "Aufgaben hinzufügen"
+      sort_by_title: "Nach Titel sortieren"

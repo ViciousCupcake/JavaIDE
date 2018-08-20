@@ -1,0 +1,45 @@
+doctype html
+html lang='en'
+  head
+    meta charset='utf8'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+    title = application_name
+    link href=asset_path('favicon.png') rel='icon' type='image/png'
+    = stylesheet_link_tag(asset_path('bootstrap.min.css', type: :stylesheet))
+    = stylesheet_link_tag(asset_path('font-awesome.min.css', type: :stylesheet))
+    = stylesheet_link_tag('application', media: 'all', 'data-turbolinks-track' => true)
+    = javascript_include_tag('application', 'data-turbolinks-track' => true)
+    = javascript_include_tag(asset_path('underscore-min.js', type: :javascript))
+    = javascript_include_tag(asset_path('bootstrap.min.js', type: :javascript))
+    = yield(:head)
+    = csrf_meta_tags
+  body
+    nav.navbar.navbar-default role='navigation'
+      .container
+        .navbar-header
+          button.navbar-toggle data-target='#navbar-collapse' data-toggle='collapse' type='button'
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          .navbar-brand
+            i.fa.fa-code
+            = application_name
+        #navbar-collapse.collapse.navbar-collapse
+          = render('navigation')
+          ul.nav.navbar-nav.navbar-right
+            = render('locale_selector')
+            li = link_to(t('shared.help.link'), '#modal-help', data: {toggle: 'modal'})
+            = render('session')
+    .container data-controller=controller_name
+      = render('flash')
+      = render('breadcrumbs')
+    - if (controller_name == "exercises" && action_name == "implement")
+      .container-fluid
+        = yield
+    - else
+      .container
+        = yield
+
+    - template_variables = {execution_environment: @exercise.execution_environment} if action_name == 'implement'
+    = render('shared/modal', classes: 'modal-lg', id: 'modal-help', template: 'application/help', template_variables: template_variables, title: t('shared.help.headline'))

@@ -1,0 +1,5 @@
+test:
+  flowr:
+    enabled: false
+  code_pilot:
+    enabled: false

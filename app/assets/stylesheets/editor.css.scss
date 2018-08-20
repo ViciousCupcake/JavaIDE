@@ -1,0 +1,210 @@
+button i.fa-spin {
+  display: none;
+}
+
+.editor {
+  height: 100%;
+  width: 100%;
+}
+
+/* this class is used for the edit view of an exercise. It needs the height set, as it does not automatically resize */
+.edit-frame {
+  height: 400px;
+
+  audio, img, video {
+    max-width: 100%;
+  }
+}
+
+
+.frame {
+  display: none;
+  min-height: 300px;
+
+  audio, img, video {
+    max-width: 100%;
+  }
+}
+
+.score {
+  display: none;
+  vertical-align: bottom;
+}
+
+#alert, #development-environment {
+  display: none;
+}
+
+#dummy {
+  display: none;
+}
+
+#editor-buttons {
+  background-color: #008CBA;
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+
+  button {
+    font-size: 80%;
+  }
+
+  button, .btn-group {
+    flex-grow: 1;
+  }
+
+  .btn-group {
+    button {
+      width: 75%;
+    }
+
+    button.dropdown-toggle {
+      width: 25%;
+    }
+  }
+}
+
+#files {
+  overflow: auto;
+}
+
+#hint {
+  display: none;
+}
+
+#outputInformation {
+  #output {
+    max-height: 500px;
+    width: 100%;
+    overflow: auto;
+    margin: 2em 0;
+
+    p {
+      margin: 0.5em;
+    }
+
+    pre + pre {
+      margin-top: 1em;
+    }
+  }
+}
+
+#results {
+  display: none;
+}
+
+#autosave-label{
+  visibility: hidden;
+  height: 1.6em;
+  text-align:  right;
+  color: #777;
+  font-size: 0.8em;
+}
+
+#turtlecanvas{
+  border-style:solid;
+  border-width:thin;
+  display: block;
+  margin: auto;
+
+}
+
+.sidebar-col-collapsed {
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  width:67px;
+  float:left;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.sidebar-col {
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  width:20%;
+  float:left;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.editor-col {
+  min-height: 1px;
+  width:auto;
+  height:100%;
+  overflow:hidden;
+}
+
+.output-col {
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  width:40%;
+  float:right;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box
+}
+
+.output-col-collapsed {
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  width:67px;
+  float:right;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box
+}
+
+.enforce-top-margin {
+  margin-top: 5px !important;
+}
+
+.enforce-right-margin {
+  margin-right: 10px !important;
+}
+
+.description-panel-collapsed {
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  height: 0px;
+  visibility: hidden;
+}
+
+.description-panel {
+  height: auto;
+  -webkit-transition: height 2s;
+  transition: height 2s;
+  visibility: visible;
+}
+
+.enforce-big-top-margin {
+  margin-top: 15px !important;
+}
+
+.enforce-bottom-margin {
+  margin-bottom: 5px !important;
+}
+
+#error-hints {
+  display: none;
+  background-color: #FAFAFA;
+
+  .heading {
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  ul.body {
+
+    li.hint {
+      .description {
+        font-style: italic;
+      }
+
+      .hint {}
+    }
+  }
+}

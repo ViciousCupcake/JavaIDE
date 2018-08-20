@@ -1,0 +1,17 @@
+AllCops:
+  Exclude:
+    - bin/*
+    - config/application.rb
+    - config/initializers/sorcery.rb
+    - db/seeds/**/*
+    - db/schema.rb
+    - public/uploads/**/*
+    - tmp/**/*
+  RunRailsCops: true
+Metrics/LineLength:
+  Enabled: false
+require: rubocop-rspec
+Style/Documentation:
+  Enabled: false
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space

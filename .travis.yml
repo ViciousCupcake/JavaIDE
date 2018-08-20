@@ -1,0 +1,44 @@
+sudo: required
+
+services:
+  - docker
+
+addons:
+  code_climate:
+    repo_token:
+      secure: "cZoMNjQKB/D7W4B7JDk9PXooy2WCDypu7R4C/Vi0DziZCU9HRwLbdt9aoH5hgHFa7Fe2rHFgflPAAP7h698ozvP0waFtPqLAj+PbEt27LbBDvW8JcvNkKXA0rj5wyTkzuc/0kD+kPB4oDXMak6gZlB9HCJDsa3kdXScQGTVuPdU="
+  postgresql: "9.6"
+  firefox: "latest"
+
+before_install:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - echo 'DOCKER_OPTS="-H tcp://127.0.0.1:2376 -H unix:///var/run/docker.sock --iptables=false"' | sudo tee /etc/default/docker > /dev/null
+  - sudo service docker restart
+  - sleep 5
+  - docker pull openhpi/co_execenv_python
+  - docker pull openhpi/co_execenv_java
+  - mkdir ~/geckodriver
+  - wget -O ~/geckodriver/download.tar.gz https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
+  - tar -xvzf ~/geckodriver/download.tar.gz -C ~/geckodriver/
+  - rm ~/geckodriver/download.tar.gz
+  - chmod +x ~/geckodriver/geckodriver
+  - export PATH=~/geckodriver/:$PATH
+
+before_script:
+  - cp .rspec.travis .rspec
+  - cp config/action_mailer.yml.travis config/action_mailer.yml
+  - cp config/code_ocean.yml.travis config/code_ocean.yml
+  - cp config/database.yml.travis config/database.yml
+  - cp config/secrets.yml.travis config/secrets.yml
+  - cp config/docker.yml.erb.travis config/docker.yml.erb
+  - cp config/mnemosyne.yml.travis config/mnemosyne.yml
+  - psql --command='CREATE DATABASE travis_ci_test;' --username=postgres
+  - bundle exec rake db:schema:load RAILS_ENV=test
+
+cache: bundler
+language: ruby
+rvm:
+- 2.3.6
+  
+script: bundle exec rspec --color --format documentation --require spec_helper --require rails_helper && bundle exec codeclimate-test-reporter

@@ -1,0 +1,51 @@
+script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"
+h1 = @exercise
+
+= row(label: '.participants', value: @exercise.users.distinct.count)
+
+- [:intermediate, :final].each do |scope|
+  = row(label: ".#{scope}_submissions") do
+    = "#{@exercise.submissions.send(scope).count} (#{t('.users', count: @exercise.submissions.send(scope).distinct.count(:user_id))})"
+
+= row(label: '.finishing_rate') do
+  p == @exercise.finishers.count ? "#{t('shared.out_of', maximum_value: @exercise.users.distinct.count, value: @exercise.finishers.count)} #{t('exercises.statistics.external_users')}" : empty
+  - finishers_count = @exercise.users.distinct.count
+  - finishers_percentage = finishers_count == 0 ? 0 : (100.0 / finishers_count * @exercise.finishers.count).round(2)
+  p = progress_bar(finishers_percentage)
+
+= row(label: '.average_score') do
+  p == @exercise.average_score ? t('shared.out_of', maximum_value: @exercise.maximum_score, value: @exercise.average_score.round(2)) : empty
+  p = progress_bar(@exercise.average_percentage)
+
+= row(label: '.average_worktime') do
+  p = @exercise.average_working_time
+
+- Hash[:internal_users => t('.internal_users'), :external_users => t('.external_users')].each_pair do |symbol, label|
+  strong = label
+  -if symbol==:external_users
+    -working_time_array = []
+    - @exercise.send(symbol).distinct().each do |user|
+      -working_time = @exercise.average_working_time_for(user.id) or 0
+      -working_time_array.push working_time
+    hr
+    .hidden#data data-working-time=ActiveSupport::JSON.encode(working_time_array)
+    .graph-functions
+    div#chart_1
+    hr
+    /div#chart_2
+    /hr
+  .table-responsive
+    table.table.table-striped.sortable
+      thead
+        tr
+          - ['.user', '.score', '.runs', '.worktime'].each do |title|
+            th.header = t(title)
+      tbody
+        - @exercise.send(symbol).distinct().each do |user|
+          - if user_statistics[user.id] then us = user_statistics[user.id] else us = {"maximum_score" => nil, "runs" => nil}
+          - label = "#{user.displayname}"
+          tr
+            td = link_to_if symbol==:external_users, label, {controller: "exercises", action: "statistics", external_user_id: user.id, id: @exercise.id}
+            td = us['maximum_score'] or 0
+            td = us['runs']
+            td = @exercise.average_working_time_for(user.id) or 0

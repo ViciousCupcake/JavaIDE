@@ -1,0 +1,24 @@
+#flash-container {
+  position: relative;
+  top: -21px;
+}
+
+.flash {
+  display: none;
+
+  span.fa-times {
+    position: relative;
+    top: -1.2em;
+    float: right;
+    cursor: pointer;
+  }
+}
+
+.fixed_error_messages {
+  position: absolute;
+  z-index: 1000;
+  padding: inherit;
+  width: 100%;
+}
+
+

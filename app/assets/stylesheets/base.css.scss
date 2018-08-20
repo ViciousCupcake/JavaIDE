@@ -1,0 +1,92 @@
+h1 {
+  font-size: 25px;
+  margin-bottom: 0.5em;
+}
+
+.lead {
+  font-size: 16px;
+  color: rgba(70, 70, 70, 1);
+}
+
+i.fa {
+  margin-right: 0.5em;
+}
+
+pre {
+  background-color: #FAFAFA;
+  margin: 0;
+  padding: 0;
+}
+
+span.caret {
+  margin-left: 0.5em;
+}
+
+.progress {
+  margin: 0;
+
+  .progress-bar {
+    line-height: initial;
+    min-width: 2em;
+  }
+}
+
+.attribute-row + .attribute-row {
+  margin-top: 0.5em;
+}
+
+.badge {
+  font-size: 100%;
+}
+
+.container[data-controller] {
+  padding-bottom: 15px;
+}
+
+.disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.empty {
+  opacity: 0.5;
+}
+
+.flash {
+  font-size: 100%;
+}
+
+.markdown {
+  height: 200px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}

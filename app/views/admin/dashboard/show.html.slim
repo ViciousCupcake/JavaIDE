@@ -1,0 +1,27 @@
+- content_for :head do
+  = javascript_include_tag(asset_path('vis.min.js', type: :javascript))
+  = stylesheet_link_tag(asset_path('vis.min.css', type: :stylesheet))
+
+h1 = t('breadcrumbs.dashboard.show')
+
+h2 Docker
+
+- if DockerContainerPool.config[:active]
+  h3 = t('.current')
+  .table-responsive
+    table.table
+      thead
+        tr
+          th = t('activerecord.models.execution_environment.one')
+          th = t('activerecord.attributes.execution_environment.pool_size')
+          th = t('.quantity')
+      tbody
+        - ExecutionEnvironment.order(:name).each do |execution_environment|
+          tr data-id=execution_environment.id
+            td.name = link_to(execution_environment, execution_environment)
+            td.pool-size
+            td.quantity = progress_bar(0)
+  h3 = t('.history')
+  #graph
+- else
+  p = t('.inactive')

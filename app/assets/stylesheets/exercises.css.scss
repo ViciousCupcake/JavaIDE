@@ -1,0 +1,166 @@
+code {
+  background-color: #F8F8F8 !important;
+  max-height: 100px;
+  overflow: scroll;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+#exercise_template_code {
+  font-family: monospace;
+}
+
+.exercise {
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  padding: 1px 10px 1px 10px;
+  margin-bottom: 10px;
+
+  a#toggle {
+    margin-bottom: 5px;
+    float: right;
+  }
+
+  a#toggle:before {
+    content: "(";
+  }
+
+  a#toggle:after {
+    content: ")";
+  }
+
+  h1#exercise-headline {
+    margin: 10px 0 10px 0;
+  }
+
+  .lead.description-panel-collapsed {
+    margin: 0;
+  }
+}
+
+// Graph Settings
+
+.axis path {
+  fill: none;
+  stroke: #100;
+  shape-rendering: crispEdges;
+}
+.axis line {
+  fill: none;
+  stroke: #999;
+  //shape-rendering: crispEdges;
+}
+
+.y.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  //stroke: orange;//steelblue;
+  stroke-width: 2px;
+}
+.line2 {
+  fill: none;
+  //stroke: red;//steelblue;
+  stroke-width: 3px;
+}
+
+div#chart_1 {
+  background-color: #FAFAFA;
+}
+
+div#chart_2 {
+  background-color: #FAFAFA;
+}
+
+
+a.file-heading {
+  color: black !important;
+  text-decoration: none;
+}
+
+.bar {
+  fill: orange;
+}
+
+.bar:hover {
+  fill:  #ffd897;
+}
+
+.container > form > .actions {
+  margin-bottom: 200px;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.feedback-page {
+  .header {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .value {
+    border: 1px solid grey;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .no-feedback {
+    font-weight: bold;
+    margin-top: 50px;
+  }
+
+  .feedback-header {
+    display: flex;
+    align-items: baseline;
+
+    .username {
+      flex-grow: 1;
+      font-weight: bold;
+    }
+
+    .date {}
+  }
+
+  .feedback {
+    .text {
+      margin-bottom: 10px;
+    }
+    .difficulty {
+      font-weight: bold;
+    }
+    .worktime {
+      font-weight: bold;
+    }
+  }
+}
